@@ -1,0 +1,35 @@
+[
+	{
+		name: '霧',
+		specie: '小烏丸',
+		skill: [],
+		level: 25,
+		attributes: {
+			hp: 52,
+			strength:  46, skill:   50, speed:  46,
+			defense:   43, wisdom:  42, luck:   14
+		}
+	},
+	{
+		name: '金雀',
+		specie: '白兔',
+		skill: [],
+		level: 25,
+		attributes: {
+			hp: 56,
+			strength:  47, skill:   50, speed:  51,
+			defense:   43, wisdom:  47, luck:   20
+		}
+	},
+	{
+		name: '鬼燈',
+		specie: '天女',
+		skill: ['弓閃避 皆傳'],
+		level: 25,
+		attributes: {
+			hp: 56,
+			strength:  47, skill:   50, speed:  51,
+			defense:   43, wisdom:  47, luck:   20
+		}
+	}
+]

@@ -1,0 +1,144 @@
+<div class="btnGroup">
+    <a class="btn btn-back" href="list.html">back</a>
+</div>
+<table>
+    <thead>
+    <tr>
+        <td>名稱</td>
+        <td>總族</td>
+        <td>等級</td>
+        <!-- 屬性 -->
+        <td class="attr">HP</td>
+        <td class="attr">力</td>
+        <td class="attr">技</td>
+        <td class="attr">速</td>
+        <td class="attr">守</td>
+        <td class="attr">賢</td>
+        <td class="attr">運</td>
+        <td class="attr">總合(-hp)</td>
+    </tr>
+    <tbody>
+        <!-- 陽式 sun -->
+        <tr>
+            <td>
+                <select ng-model="sun" ng-options="character.name group by character.specie for character in characterList" ng-change="updateCombineResult()"></select>
+            </td>
+            <td>{{sun.specie}}</td>
+            <td>{{sun.level}}</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{sun.attributes.hp}}</td>
+            <td class="attr">{{sun.attributes.strength}}</td>
+            <td class="attr">{{sun.attributes.skill}}</td>
+            <td class="attr">{{sun.attributes.speed}}</td>
+            <td class="attr">{{sun.attributes.defense}}</td>
+            <td class="attr">{{sun.attributes.wisdom}}</td>
+            <td class="attr">{{sun.attributes.luck}}</td>
+            <td class="attr">{{sun.totalAttributes}}</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{sun.growth.hp.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.strength.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.skill.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.speed.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.defense.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.wisdom.toFixed(2)}}</td>
+            <td class="attr">{{sun.growth.luck.toFixed(2)}}</td>
+            <td class="attr">{{sun.totalGrowth.toFixed(2)}}({{(sun.totalGrowth-sun.growth.hp).toFixed(2)}})</td>
+        </tr>
+
+        <!-- 陰式 moon -->
+        <tr>
+            <td>
+                <select ng-model="moon" ng-options="character.name group by character.specie for character in characterList" ng-change="updateCombineResult()"></select>
+            </td>
+            <td>{{moon.specie}}</td>
+            <td>{{moon.level}}</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{moon.attributes.hp}}</td>
+            <td class="attr">{{moon.attributes.strength}}</td>
+            <td class="attr">{{moon.attributes.skill}}</td>
+            <td class="attr">{{moon.attributes.speed}}</td>
+            <td class="attr">{{moon.attributes.defense}}</td>
+            <td class="attr">{{moon.attributes.wisdom}}</td>
+            <td class="attr">{{moon.attributes.luck}}</td>
+            <td class="attr">{{moon.totalAttributes}}</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{moon.growth.hp.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.strength.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.skill.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.speed.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.defense.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.wisdom.toFixed(2)}}</td>
+            <td class="attr">{{moon.growth.luck.toFixed(2)}}</td>
+            <td class="attr">{{moon.totalGrowth.toFixed(2)}}({{(moon.totalGrowth-moon.growth.hp).toFixed(2)}})</td>
+        </tr>
+
+        <!-- result -->
+        <tr ng-show="sun && moon">
+            <td>{{sun.name}}</td>
+            <td>
+                <select ng-model="combineSpecie" ng-options="name as name group by detail.grade for (name, detail) in species" ng-change="updateCombineResult()"></select>
+            </td>
+            <td>{{0}}</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{sun.base.lv0.hp}}</td>
+            <td class="attr">{{sun.base.lv0.strength}}</td>
+            <td class="attr">{{sun.base.lv0.skill}}</td>
+            <td class="attr">{{sun.base.lv0.speed}}</td>
+            <td class="attr">{{sun.base.lv0.defense}}</td>
+            <td class="attr">{{sun.base.lv0.wisdom}}</td>
+            <td class="attr">{{sun.base.lv0.luck}}</td>
+            <td class="attr">{{ZGUtil.sum(sun.base.lv0)}}</td>
+        </tr>
+        <tr ng-show="sun && moon">
+            <td class="centerText" colspan="3">內蓄積</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{combine.growth.hp}}</td>
+            <td class="attr">{{combine.growth.strength}}</td>
+            <td class="attr">{{combine.growth.skill}}</td>
+            <td class="attr">{{combine.growth.speed}}</td>
+            <td class="attr">{{combine.growth.defense}}</td>
+            <td class="attr">{{combine.growth.wisdom}}</td>
+            <td class="attr">{{combine.growth.luck}}</td>
+            <td class="attr">{{combine.totalGrowth}} ({{combine.totalGrowth-combine.growth.hp}})</td>
+        </tr>
+        <tr ng-show="sun && moon">
+            <td class="centerText" colspan="3">最低成長</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{sun.base.growth.hp}}</td>
+            <td class="attr">{{sun.base.growth.strength}}</td>
+            <td class="attr">{{sun.base.growth.skill}}</td>
+            <td class="attr">{{sun.base.growth.speed}}</td>
+            <td class="attr">{{sun.base.growth.defense}}</td>
+            <td class="attr">{{sun.base.growth.wisdom}}</td>
+            <td class="attr">{{sun.base.growth.luck}}</td>
+            <td class="attr">{{ZGUtil.sum(sun.base.growth)}}</td>
+        </tr>
+        <tr ng-show="sun && moon">
+            <td colspan="2"></td>
+            <td>1</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{combine.attributes.hp}}</td>
+            <td class="attr">{{combine.attributes.strength}}</td>
+            <td class="attr">{{combine.attributes.skill}}</td>
+            <td class="attr">{{combine.attributes.speed}}</td>
+            <td class="attr">{{combine.attributes.defense}}</td>
+            <td class="attr">{{combine.attributes.wisdom}}</td>
+            <td class="attr">{{combine.attributes.luck}}</td>
+            <td class="attr">{{combine.totalAttributes}}</td>
+        </tr>
+    </tbody>
+</table>

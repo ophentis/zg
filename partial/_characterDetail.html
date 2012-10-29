@@ -1,0 +1,50 @@
+<div class="btnGroup">
+    <a class="btn btn-back" href="list.html">back</a>
+</div>
+<form id="characterAddForm" name="characterAddForm">
+    <table>
+        <thead>
+            <tr>
+				<td class="name" ng-show="character._id">隱藏</td>
+                <td class="name">名稱</td>
+                <td class="specie">種族</td>
+                <td class="level">等級</td>
+
+                <!-- 屬性 -->
+                <td class="attr">HP</td>
+                <td class="attr">力</td>
+                <td class="attr">技</td>
+                <td class="attr">速</td>
+                <td class="attr">守</td>
+                <td class="attr">賢</td>
+                <td class="attr">運</td>
+                <td>總合</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+				<td class="archive" ng-show="character._id"><input type="checkbox" ng-model="character.archive" /></td>
+                <td class="name"><input type="text" name="name" ng-model="character.name" /></td>
+                <td class="specie">
+                    <select ng-model="character.specie" ng-options="name as name group by detail.grade for (name, detail) in species"></select>
+                </td>
+                <td class="level"><input type="number" ng-model="character.level" value="1" min="1" required /></td>
+
+                <!-- 屬性 -->
+                <td class="attr"><input type="number" ng-model="character.attributes.hp" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.strength" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.skill" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.speed" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.defense" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.wisdom" value="1" min="1" required /></td>
+                <td class="attr"><input type="number" ng-model="character.attributes.luck" value="1" min="1" required /></td>
+                <td>{{ZGUtil.sum(character.attributes)}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btnGroup">
+        <a href="list.html" class="btn" />取消</a>
+        <input class="btn btn-primary" ng-click="save()" ng-disabled="isClean() || myForm.$invalid" value="儲存" />
+        <input class="btn btn-danger" ng-show="character._id"  ng-click="remove()" value="刪除" />
+    </div>
+</form>

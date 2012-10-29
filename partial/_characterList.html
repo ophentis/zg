@@ -1,0 +1,73 @@
+<div class="btnGroup">
+    <a class="btn" href="#/add/" >Add</a>
+    <a class="btn" href="#/combine/" >Combine</a>
+	<label>顯示隱藏<input type="checkbox" ng-model="showArchive" /></label>
+</div>
+<table id="characterList">
+    <thead>
+        <tr>
+            <td colspan="3"></td>
+            <td colspan="8">屬性</td>
+            <td colspan="8">蓄積值</td>
+            <td colspan="1">控制</td>
+        </tr>
+        <tr>
+            <td class="name">名稱</td>
+            <td class="specie">總族</td>
+            <td class="level">等級</td>
+
+            <!-- 屬性 -->
+            <td class="attr">HP</td>
+            <td class="attr">力</td>
+            <td class="attr">技</td>
+            <td class="attr">速</td>
+            <td class="attr">守</td>
+            <td class="attr">賢</td>
+            <td class="attr">運</td>
+            <td class="attr">總合</td>
+
+            <!-- 蓄績值 -->
+            <td class="growth">HP</td>
+            <td class="growth">力</td>
+            <td class="growth">技</td>
+            <td class="growth">速</td>
+            <td class="growth">守</td>
+            <td class="growth">賢</td>
+            <td class="growth">運</td>
+            <td class="growth">總合</td>
+
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="character in characterList | orderBy:'specie'">
+            <td class="name">{{character.name}}</td>
+            <td class="specie">{{character.specie}}</td>
+            <td class="level">{{character.level}}</td>
+
+            <!-- 屬性 -->
+            <td class="attr">{{character.attributes.hp}}</td>
+            <td class="attr">{{character.attributes.strength}}</td>
+            <td class="attr">{{character.attributes.skill}}</td>
+            <td class="attr">{{character.attributes.speed}}</td>
+            <td class="attr">{{character.attributes.defense}}</td>
+            <td class="attr">{{character.attributes.wisdom}}</td>
+            <td class="attr">{{character.attributes.luck}}</td>
+            <td class="attr">{{character.totalAttributes}}</td>
+
+            <!-- 蓄積值 -->
+            <td class="growth growth-{{character.growth.hp>=0}}">{{character.growth.hp.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.strength>=0}}">{{character.growth.strength.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.skill>=0}}">{{character.growth.skill.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.speed>=0}}">{{character.growth.speed.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.defense>=0}}">{{character.growth.defense.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.wisdom>=0}}">{{character.growth.wisdom.toFixed(2)}}</td>
+            <td class="growth growth-{{character.growth.luck>=0}}">{{character.growth.luck.toFixed(2)}}</td>
+            <td class="growth growth">{{character.totalGrowth.toFixed(2)}}</td>
+            <td>
+                <a class="btn" href="graph.html#/{{character._id.$oid}}">view</a>
+                <a class="btn" href="#/edit/{{character._id.$oid}}">edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

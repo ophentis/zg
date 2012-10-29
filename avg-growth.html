@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset='utf-8'>
+<!--        <link rel="stylesheet" href="css/btn.css" /> -->
+        <link rel="stylesheet" href="css/zg.css" />
+        <title>式姬草子 - Average Growth</title>
+        <style></style>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script> <!-- @required for mongolab -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
+        <!--<script src="http://code.highcharts.com/highcharts-more.js"></script>-->
+        <!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
+<!--         <script src="lib/zg/module/mongolab.js"></script> -->
+        <script src="lib/zg/zg.js"></script>
+        <script src="lib/zg/base.js"></script>
+        <script src="lib/zg/util.js"></script>
+        <script src="js/avg-growth.js"></script>
+    </head>
+    <body>
+        <table ng-model="mainCtrl">
+            <thead>
+            <tr>
+                <td>總族</td>
+    
+                <!-- 屬性 -->
+                <td>HP</td>
+                <td>力</td>
+                <td>技</td>
+                <td>速</td>
+                <td>守</td>
+                <td>賢</td>
+                <td>運</td>
+                <td>總合</td>
+            </tr>
+            <tbody>
+                <tr ng-repeat="specie in species">
+                    <td>{{character.specie}}</td>
+        
+                    <!-- 屬性 -->
+                    <td>{{character.attributes.hp}}</td>
+                    <td>{{character.attributes.strength}}</td>
+                    <td>{{character.attributes.skill}}</td>
+                    <td>{{character.attributes.speed}}</td>
+                    <td>{{character.attributes.defense}}</td>
+                    <td>{{character.attributes.wisdom}}</td>
+                    <td>{{character.attributes.luck}}</td>
+                    <td>{{character.totalAttributes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
