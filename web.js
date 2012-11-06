@@ -12,16 +12,17 @@ app.configure('develop',function() {
 app.configure(function() {
     app.set('title', '式姬草子小幫手');
 
-    app.use(express.static(__dirname + '/css'));
-    app.use(express.static(__dirname + '/js'));
-    app.use(express.static(__dirname + '/lib'));
-    app.use(express.static(__dirname + '/partial'));
+	app.use('/', express.static(__dirname + '/html'));
+    app.use('/css', express.static(__dirname + '/css'));
+    app.use('/js', express.static(__dirname + '/js'));
+    app.use('/lib', express.static(__dirname + '/lib'));
+    app.use('/partial', express.static(__dirname + '/partial'));
 });
 
 //setup pages
-app.get('/', function(request, response) {
-    response.send('Hello World!');
-});
+// app.get('/', function(request, response) {
+    // response.send('Hello World!');
+// });
 
 //init server and listen on port
 var port = process.env.PORT || 5000;

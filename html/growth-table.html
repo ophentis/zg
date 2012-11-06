@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset='utf-8'>
+<!-- 		<link rel="stylesheet" href="css/btn.css" /> -->
+<!-- 		<link rel="stylesheet" href="css/zg.css" /> -->
+		<title>式姬草子 - Graph</title>
+		<style>td{padding:2px 4px;}.zero-true{color:lightgray;}</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+<!--         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script> <!-- @required for mongolab -->
+<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+		<!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
+		<!--<script src="http://code.highcharts.com/highcharts-more.js"></script>-->
+		<!--<script src="http://code.highcharts.com/modules/exporting.js"></script>-->
+<!-- 		<script src="lib/zg/module/mongolab.js"></script> -->
+<!-- 		<script src="lib/zg/zg.js"></script> -->
+<!-- 		<script src="lib/zg/species.js"></script> -->
+<!-- 		<script src="lib/zg/base.js"></script> -->
+<!-- 		<script src="lib/zg/util.js"></script> -->
+<!-- 		<script src="lib/zg/reduce.js"></script> -->
+		<script src="../js/growth-table.js"></script>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div>
+			<input ng-model="level" type="range" min="1" max="32" ng-change="updateTable()" />
+			<label>Level: {{level}}</label>
+		</div>
+		
+		<div>
+			<input ng-model="percentage" type="range" min="100" max="200" ng-change="updateTable()" />
+			<label>Growth: {{(percentage/100).toFixed(2)}}%</label>
+		</div>
+		
+		<table>
+			<tr>
+				<th></th>
+				<th ng-repeat="col in table[0]">{{$index+1}}</td>
+			</tr>
+			<tr ng-repeat="row in table">
+				<th>{{$index+1}}</th>
+				<td ng-repeat="col in row" class="zero-{{col.toFixed(3)=='0.000'}}">{{col.toFixed(3) || ''}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
