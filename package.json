@@ -1,16 +1,16 @@
 {
-	'name': 'zg-helper',
-	'version': '0.0.1',
-	'private': true,
-	'scripts': {
-		'start': 'node app'
+	"name": "zg-helper",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app"
 	},
-	'engines': {
-		'node': '0.8.x',
-		'npm': '1.1.x'
+	"engines": {
+		"node": "0.8.x",
+		"npm": "1.1.x"
 	},
-	'dependencies': {
-		'express': '3.0.1',
-		'ejs': '*'
+	"dependencies": {
+		"express": "3.0.1",
+		"ejs": "*"
 	}
 }
