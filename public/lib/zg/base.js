@@ -81,7 +81,7 @@ ZG.base['黒兎'] = {
 ZG.base['狗賓'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
-	lv10: 	{ hp: 28, strength:  9, skill: 15, speed: 15, defense: 10, wisdom: 14, luck: 10 },
+	lv0: 	{ hp: 28, strength:  9, skill: 15, speed: 15, defense: 10, wisdom: 14, luck: 10 },
 	lv1Min: { hp: 29, strength: 10, skill: 16, speed: 16, defense: 11, wisdom: 15, luck: 10 },
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
@@ -171,7 +171,7 @@ ZG.base['雪女'] = {
 ZG.base['地精'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
-	lv10: 	{ hp: 28, strength:  9, skill: 15, speed: 15, defense: 10, wisdom: 14, luck: 10 },
+	lv0: 	{ hp: 28, strength:  9, skill: 15, speed: 15, defense: 10, wisdom: 14, luck: 10 },
 	lv1Min: { hp: 29, strength: 10, skill: 16, speed: 16, defense: 11, wisdom: 15, luck: 10 },
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
