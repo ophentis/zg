@@ -28,3 +28,6 @@ ZG.reduce['貓又'] 	= { hp: 1.17, strength: 1.27, skill: 1.30, speed: 1.27, def
 
 /** 舶來種 **/
 ZG.reduce['獅子女'] 	= { hp: 1.02, strength: 1.28, skill: 1.31, speed: 1.31, defense: 1.29, wisdom: 1.34, luck: 0.34 }
+ZG.reduce['墮天使'] 	= { hp: 1.00, strength: 1.27, skill: 1.31, speed: 1.29, defense: 1.21, wisdom: 1.34, luck: 0.34 }
+ZG.reduce['吸血姬'] 	= { hp: 1.06, strength: 1.22, skill: 1.34, speed: 1.33, defense: 1.27, wisdom: 1.33, luck: 0.41 }
+ZG.reduce['戰乙女'] 	= { hp: 1.08, strength: 1.34, skill: 1.33, speed: 1.21, defense: 1.29, wisdom: 1.29, luck: 0.42 }

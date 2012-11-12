@@ -175,6 +175,7 @@ ZG.base['地精'] = {
 	lv1Min: { hp: 29, strength: 10, skill: 16, speed: 16, defense: 11, wisdom: 15, luck: 10 },
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
+
 ZG.base['古椿'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
@@ -196,7 +197,7 @@ ZG.base['茨木童子'] = {
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	lv0:    { hp: 26, strength:  9, skill: 13, speed: 12, defense: 11, wisdom: 15, luck: 13 },
 	lv1Min: { hp: 27, strength: 10, skill: 14, speed: 13, defense: 12, wisdom: 16, luck: 13 },
-	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 }
 }
 
 /** 最上級種 **/
@@ -208,17 +209,40 @@ ZG.base['鳳凰'] = {}
 
 /** 舶來種 **/
 
-ZG.base['吸血姬'] = {}
-ZG.base['戰乙女'] = {}
+ZG.base['吸血姬'] = {
+	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
+	lv0:    { hp: 29, strength: 14, skill: 15, speed: 15, defense: 12, wisdom: 12, luck: 11 },
+	lv1Min: { hp: 30, strength: 15, skill: 16, speed: 16, defense: 13, wisdom: 13, luck: 11 },
+	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+}
+
+ZG.base['戰乙女'] = {
+	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
+	lv0:    { hp: 31, strength: 16, skill: 15, speed: 15, defense: 13, wisdom: 14, luck: 11 },
+	lv1Min: { hp: 32, strength: 17, skill: 16, speed: 16, defense: 14, wisdom: 15, luck: 11 },
+	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+}
+
 ZG.base['獅子女'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	lv0:    { hp: 30, strength: 14, skill: 16, speed: 16, defense: 15, wisdom: 17, luck: 10 },
 	lv1Min: { hp: 32, strength: 16, skill: 17, speed: 17, defense: 15, wisdom: 18, luck: 11 },
-	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
-};
+	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 }
+}
+
 ZG.base['死神'] = {}
-ZG.base['墮天使'] = {}
+
+ZG.base['墮天使'] = {
+	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
+	lv0:    { hp: 33, strength: 11, skill: 16, speed: 16, defense: 14, wisdom: 18, luck: 11 },
+	lv1Min: { hp: 34, strength: 12, skill: 17, speed: 17, defense: 15, wisdom: 20, luck: 11 },
+	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
+}
+
 ZG.base['齊天大聖'] = {}
 
 /** 神話 **/

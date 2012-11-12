@@ -21,10 +21,11 @@ ZG.growth['希瑟']  	= { hp: 1.09, strength: 1.29, skill: 1.27, speed: 1.36, de
 /** 上位種 **/
 ZG.growth['小狐丸']	= { hp: 1.18, strength: 1.34, skill: 1.32, speed: 1.29, defense: 1.25, wisdom: 1.33, luck: 0.34 }
 ZG.growth['烏天狗'] 	= { hp: 0.98, strength: 1.12, skill: 1.30, speed: 1.37, defense: 0.84, wisdom: 1.41, luck: 0.36 }
-ZG.growth['吉祥天'] 	= { hp: 1.02, strength: 1.25, skill: 1.32, speed: 1.33, defense: 0.97, wisdom: 1.38, luck: 0.38 }
+ZG.growth['吉祥天'] 	= { hp: 1.21, strength: 1.38, skill: 1.29, speed: 1.63, defense: 1.08, wisdom: 1.54, luck: 0.46 }
 ZG.growth['飯綱'] 	= { hp: 1.04, strength: 1.28, skill: 1.29, speed: 1.35, defense: 1.19, wisdom: 1.33, luck: 0.32 }
 ZG.growth['羅剎'] 	= { hp: 1.24, strength: 1.43, skill: 1.22, speed: 1.21, defense: 1.35, wisdom: 1.24, luck: 0.31 }
 ZG.growth['貓又'] 	= { hp: 1.32, strength: 1.41, skill: 1.44, speed: 1.40, defense: 1.37, wisdom: 1.37, luck: 0.37 }
 
 /** 舶來種 **/
 ZG.growth['獅子女'] 	= { hp: 1.02, strength: 1.28, skill: 1.31, speed: 1.31, defense: 1.29, wisdom: 1.34, luck: 0.34 }
+ZG.growth['墮天使'] 	= { hp: 1.02, strength: 1.28, skill: 1.31, speed: 1.31, defense: 1.29, wisdom: 1.34, luck: 0.34 }
