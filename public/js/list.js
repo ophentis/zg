@@ -21,7 +21,6 @@ function ListCharacterCtrl($scope, Character){
             character.growth = ZGUtil.growth(character);
             character.totalGrowth = ZGUtil.sum(character.growth);
         }
-		console.log(characters);
 	});
 
 }

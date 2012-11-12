@@ -36,7 +36,7 @@ ZG.base['白兔'] = {
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
 
-ZG.base['悪鬼'] = {
+ZG.base['惡鬼'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
 	lv0:    { hp: 26, strength: 14, skill: 13, speed: 12, defense: 11, wisdom:  9, luck: 10 },
@@ -122,7 +122,7 @@ ZG.base['吉翔天'] = {
 ZG.base['飯綱'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
-	lv10: 	{ hp: 27, strength: 15, skill: 15, speed: 16, defense: 11, wisdom: 14, luck: 10 },
+	lv0: 	{ hp: 27, strength: 15, skill: 15, speed: 16, defense: 11, wisdom: 14, luck: 10 },
 	lv1Min: { hp: 28, strength: 16, skill: 16, speed: 17, defense: 12, wisdom: 13, luck: 10 },
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
@@ -168,7 +168,7 @@ ZG.base['雪女'] = {
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
 
-ZG.base['コロボックル'] = {
+ZG.base['地精'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	lv10: 	{ hp: 28, strength:  9, skill: 15, speed: 15, defense: 10, wisdom: 14, luck: 10 },

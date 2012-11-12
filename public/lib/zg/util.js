@@ -18,18 +18,19 @@ ZGUtil.growth = function(character) {
             lv0 = ZG.base[character.specie].lv0,
             reduce = ZG.reduce[character.specie];
     } catch(e) {
+    	console.error(character);
+    	console.error(e);
         return {};
     }
 
     // console.log(character);
 
     var growth = angular.extend({},character.attributes);
-
     for( var attr in growth ) {
         var original = growth[attr];
         growth[attr] = original - lv0[attr] - reduce[attr]*level;
     }
-
+	console.log(growth);
     return growth;
 }
 
