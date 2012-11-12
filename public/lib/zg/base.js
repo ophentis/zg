@@ -111,7 +111,7 @@ ZG.base['小狐丸'] = {
 	lv0Cap: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 }
 
-ZG.base['吉翔天'] = {
+ZG.base['吉祥天'] = {
 	cap:    { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  1 },
 	growth: { hp:  1, strength:  1, skill:  1, speed:  1, defense:  1, wisdom:  1, luck:  0 },
 	lv0:    { hp: 28, strength: 14, skill: 14, speed: 12, defense: 12, wisdom: 14, luck: 11 },
